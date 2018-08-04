@@ -363,10 +363,42 @@ nav h1 a {
 
 /* ====================== Responsive Layout Settings ====================== */
 
-@media screen and (min-width: 350px) {
+/* PHONE SETTINGS */
+
+@media screen and (min-width: 0px) and (max-width: 650px) {
   #restaurant-container,
   #map-container,
   #footer {
     width: 100%;
   }
+  #map {
+    height: 250px;
+  }
+  header {
+    font-size: 0.2em;
+    height: 50px;
+    line-height: 1.2;
+  }
+  #restaurants-list li {
+    width: 100%;
+  }
+  #neighborhoods-select,
+  #cuisines-select {
+    width: 46%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1em;
+  }
+  .filter-options h2 {
+    font-size: 1em;
+  }
+  #footer {
+    font-size: 1em;
+    height: 40px;
+    padding: 10px;
+  }
 }
+
+/* TABLET SETTINGS */
+
+@media screen and (min-width: 651px) and (max-width: 770px) {}
