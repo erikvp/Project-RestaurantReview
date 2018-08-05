@@ -8,7 +8,6 @@ For the **Restaurant Reviews** project, you will incrementally convert a static 
 
 The original starter files can be found here: [Udacity Github Respoitory](https://github.com/udacity/mws-restaurant-stage-1)
 
-
 ### Run The Application
 
 1. Create a project folder (e.g. Restaurant-Review), start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer.
@@ -17,7 +16,6 @@ The original starter files can be found here: [Udacity Github Respoitory](https:
    * Python v3.x: Change the directory to your project directory.  Type the following into the terminal - `python3 -m http.server 8000`.
 
 3. With your server running, visit the site: `http://localhost:8000`, from your web browser (e.g. Chrome).
-
 
 ## Leaflet.js and Mapbox
 
