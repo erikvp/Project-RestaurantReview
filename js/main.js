@@ -1,8 +1,8 @@
 let restaurants,
   neighborhoods,
   cuisines
-let newMap
-let markers = []
+var newMap; // doesn't work using let
+var markers = []; // doesn't work using let
 
 
 /**
@@ -12,6 +12,7 @@ let markers = []
 document.addEventListener('DOMContentLoaded', (event) => {
   registerServiceWorker(); // for offline cache of app content
   initMap(); // added 
+
   fetchNeighborhoods();
   fetchCuisines();
 });
@@ -238,11 +239,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 } */
 
 registerServiceWorker = () => {
-  if (!navigator.serviceWorker) return;
+  console.log(navigator.serviceWorker);
+  if (!navigator.serviceWorker) {
+    console.log("The current browser doesn't support service workers");
+    return;
+  }
 
-  navigator.serviceWorker.register('/sw.js').then(() => {
-    console.log('PASS: Service worker is registered!')
+  navigator.serviceWorker.register('/js/sw.js').then(() => {
+    console.log('PASS: Service worker registered!')
   }).catch(() => {
-    console.log('FAILED: Service worker did not register.')
+    console.log('FAILED: Service worker not registered.')
   })
 }
