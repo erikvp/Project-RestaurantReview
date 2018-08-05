@@ -12,7 +12,6 @@ var markers = []; // doesn't work using let
 document.addEventListener('DOMContentLoaded', (event) => {
   registerServiceWorker(); // for offline cache of app content
   initMap(); // added 
-
   fetchNeighborhoods();
   fetchCuisines();
 });
