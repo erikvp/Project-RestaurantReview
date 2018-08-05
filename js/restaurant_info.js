@@ -159,19 +159,19 @@ createReviewHTML = (review) => {
   const date = document.createElement('p');
   date.innerHTML = review.date;
   date.setAttribute('tabindex', '0');
-  date.setAttribute('aria-label', `written on ${review.date}`);
+  date.setAttribute('aria-label', `posted on ${review.date}`);
   li.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.setAttribute('tabindex', '0');
-  rating.setAttribute('aria-label', `review rating ${review.rating}`);
+  rating.setAttribute('aria-label', `rating ${review.rating}`);
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
   comments.setAttribute('tabindex', '0');
-  comments.setAttribute('aria-label', `review comments ${review.comments}`);
+  comments.setAttribute('aria-label', `comments ${review.comments}`);
   li.appendChild(comments);
 
   return li;
