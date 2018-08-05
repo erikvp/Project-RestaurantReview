@@ -216,8 +216,12 @@ nav h1 a {
   width: 20%;
 }
 
-#restaurants-list p {
-  max-width: 150px;
+#restaurant-location {
+  min-height: 80px;
+}
+
+#details-link {
+  min-height: 41px;
 }
 
 #restaurants-list .restaurant-img {
