@@ -1,17 +1,16 @@
 let restaurants,
   neighborhoods,
   cuisines
-var newMap
-var markers = []
-
-// let mapInfo = document.querySelector('.leaflet-control-attribution').blur();
-// mapInfo.style.tabindex = "0";
+let newMap
+let markers = []
 
 
 /**
+ * Register service worker to save data for offline use.
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+  registerServiceWorker(); // for offline cache of app content
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
@@ -195,6 +194,7 @@ createRestaurantHTML = (restaurant) => {
 
   li.append(location);
 
+  // setup div for details link and append to li
   const details = document.createElement('div');
   details.setAttribute('id', 'details-link');
 
@@ -206,8 +206,6 @@ createRestaurantHTML = (restaurant) => {
   details.append(more)
 
   li.append(details);
-
-
 
   return li
 }
@@ -238,3 +236,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+
+registerServiceWorker = () => {
+  if (!navigator.serviceWorker) return;
+
+  navigator.serviceWorker.register('/sw.js').then(() => {
+    console.log('PASS: Service worker is registered!')
+  }).catch(() => {
+    console.log('FAILED: Service worker did not register.')
+  })
+}
