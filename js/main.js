@@ -77,7 +77,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 
 /**
  * Initialize leaflet map, called from HTML.
- * Mapbox Access Token: pk.eyJ1IjoiZXJpa3ZwIiwiYSI6ImNqa2J2MWhnZTB2YnkzcGxpZ2tjajhuc3AifQ.dKwQbqaX4FCIH7OedqIfsQ
+ * Access Token: pk.eyJ1IjoiZXJpa3ZwIiwiYSI6ImNqa2J2MWhnZTB2YnkzcGxpZ2tjajhuc3AifQ.dKwQbqaX4FCIH7OedqIfsQ
  */
 initMap = () => {
   self.newMap = L.map('map', {
