@@ -39,7 +39,3 @@ Required Files:
 * js/main.js
 * js/restaurant_info.js
 * js/sw.js
-
-## IMPORTANT NOTE
-
-Remember to use Shift + Reload to refresh changes after code updates.

@@ -10,7 +10,7 @@ var markers = []; // doesn't work using let
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  // registerServiceWorker(); // for offline cache of app content
+  registerServiceWorker(); // for offline cache of app content
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
@@ -173,7 +173,7 @@ createRestaurantHTML = (restaurant) => {
   image.alt = `${restaurant.name} Restaurant`; //alt description for image
   li.append(image);
 
-  const name = document.createElement('h3');
+  const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
   name.setAttribute('tabindex', '0');
   li.append(name);
