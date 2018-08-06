@@ -1,5 +1,8 @@
 /* References for the code below:
  * https: //developers.google.com/web/fundamentals/primers/service-workers/
+ * Mohamed MCrazy - He helped me resolve the issue which was my file structure
+ * After moving sw.js to root and putting service worker registration in a separate file
+ * my offline refresh now works.
  */
 
 let CACHE_NAME = 'restaurant-cache-v1';
