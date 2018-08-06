@@ -65,5 +65,6 @@ self.addEventListener('fetch', (event) => {
     .then((response) => {
       return response || fetch(event.request);
     })
+    .catch((err) => console.log(err, event.request))
   );
 }); //eventListener
