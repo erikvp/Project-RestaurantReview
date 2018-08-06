@@ -38,4 +38,5 @@ Required Files:
 * js/dbhelper.js
 * js/main.js
 * js/restaurant_info.js
-* js/sw.js
+* js/sw_register.js
+* sw.js (this must be in the root directory)
