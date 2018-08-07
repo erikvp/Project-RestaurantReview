@@ -10,7 +10,7 @@ var markers = []; // doesn't work using let
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  registerServiceWorker(); // for offline cache of app content
+  // registerServiceWorker(); // for offline cache of app content
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
@@ -237,16 +237,16 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
-registerServiceWorker = () => {
-  console.log(navigator.serviceWorker);
-  if (!navigator.serviceWorker) {
-    console.log("The current browser doesn't support service workers");
-    return;
-  }
+// registerServiceWorker = () => {
+//   console.log(navigator.serviceWorker);
+//   if (!navigator.serviceWorker) {
+//     console.log("The current browser doesn't support service workers");
+//     return;
+//   }
 
-  navigator.serviceWorker.register('/js/sw.js').then(() => {
-    console.log('PASS: Service worker registered!')
-  }).catch(() => {
-    console.log('FAILED: Service worker not registered.')
-  })
-}
+//   navigator.serviceWorker.register('/js/sw.js').then(() => {
+//     console.log('PASS: Service worker registered!')
+//   }).catch(() => {
+//     console.log('FAILED: Service worker not registered.')
+//   })
+// }
